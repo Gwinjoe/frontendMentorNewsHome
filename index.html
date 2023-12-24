@@ -143,8 +143,24 @@
 
   <script src="./js/script.js"></script>
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!--<script>
-  AOS.init();
+
+<script>
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+   navbar.classList.remove('hidden');
+  }
+}
+
+// Create a MediaQueryList object
+var x = window.matchMedia("(min-width: 900px)")
+
+// Call listener function at run time
+myFunction(x);
+
+// Attach listener function on state changes
+x.addEventListener("change", function() {
+  myFunction(x);
+});
 </script>
-</body>-->
+</body>
 </html>
